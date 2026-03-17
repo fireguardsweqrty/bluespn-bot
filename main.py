@@ -1,10 +1,9 @@
-import os
 import asyncio
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 
-# Берем токен из настроек сервера (безопасно)
-TOKEN = os.getenv("BOT_TOKEN")
+# Твой токен уже здесь
+TOKEN = "8711447507:AAFhRRMAyb87dKbVoy79QIhO_8WaEz389co"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -31,6 +30,7 @@ async def send_vpn(callback: types.CallbackQuery):
     await callback.answer()
 
 async def main():
+    print("Бот запущен!")
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
